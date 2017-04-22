@@ -1,5 +1,4 @@
 # 基础算法与数据结构（二） 树（1）基础二叉树
-
 ## 树的基本数据结构
 ```c++
 //tree
@@ -142,4 +141,59 @@
         return ans;
 	}
 ```
+
+## 二叉树典型题
+一般二叉树的题目都可以用递归的方法解决。（例如 求树的深度，树的最浅深度以及最深度等问题）
+
+### 翻转二叉树 （leetCode 226）
+这道题有一句名言那。。。
+> Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so fuck off.！  
+
+分别翻转左右即可。。
+
+```c++
+TreeNode* invertTree(TreeNode* root) {
+       if(root==NULL) return NULL;
+       root->left = invertTree(root->left);
+       root->right = invertTree(root->right);
+       
+       TreeNode* tmp = root->left;
+       root->left = root->right;
+       root->right = tmp;
+       return root;
+    }
+```
+
+### 利用前序/中序构造二叉树
+
+根据前序中序的特征可以来模拟写出程序。
+
+先找到前序中的第一个，然后利用这个在中序中找到这个值，然后这个值之前的在左子树中，之后的在右子树中，然后分别递归再次利用这个方法继续建树。
+
+同样的可以利用中序/后序构建二叉树。
+
+```c++
+TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder){
+        if(preorder.empty() || inorder.empty()) return NULL;
+        TreeNode* root = new TreeNode(preorder[0]);
+        if(preorder.size()==1 && inorder.size()==1) return root;
+        int inOrderNum = FindNode(inorder,preorder[0]);
+        vector<int> a(preorder.begin()+1,preorder.begin()+inOrderNum+1);
+        vector<int> b(inorder.begin(),inorder.begin()+inOrderNum+1);
+        vector<int> c(preorder.begin()+inOrderNum+1,preorder.end());
+        vector<int> d(inorder.begin()+inOrderNum+1,inorder.end());
+        root->left = buildTree(a,b);
+        root->right = buildTree(c,d);
+        return root;
+    }
+    
+    int FindNode(vector<int> &v,int target){
+        int size = v.size();
+        for(int i=0;i<size;i++){
+            if(v[i] == target) return i;
+        }
+        return -1;
+    }
+```
+
 
