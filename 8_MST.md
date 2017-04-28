@@ -132,6 +132,7 @@ void Kruskal(){
 ```
 
 图示：
+摘自算法导论
 ![](8_MST/20131229163714968.jpg)
 
 
@@ -142,7 +143,48 @@ Prim算法找安全边的想法主要是，从一个根节点开始，找这个�
 
 Prim算法的实现具体代码如下：参考了geeksforgeeks网站，所以注释都是英文（MST - 最小生成树）
 ```c++
+// STL implementation of Prim's algorithm for MST
+#include<bits/stdc++.h>
+using namespace std;
+# define INF 0x3f3f3f3f
+ 
+// iPair ==>  Integer Pair
 typedef pair<int, int> iPair;
+ 
+// This class represents a directed graph using
+// adjacency list representation
+class Graph
+{
+    int V;    // No. of vertices
+ 
+    // In a weighted graph, we need to store vertex
+    // and weight pair for every edge
+    list< pair<int, int> > *adj;
+ 
+public:
+    Graph(int V);  // Constructor
+ 
+    // function to add an edge to graph
+    void addEdge(int u, int v, int w);
+ 
+    // Print MST using Prim's algorithm
+    void primMST();
+};
+ 
+// Allocates memory for adjacency list
+Graph::Graph(int V)
+{
+    this->V = V;
+    adj = new list<iPair> [V];
+}
+ 
+void Graph::addEdge(int u, int v, int w)
+{
+    adj[u].push_back(make_pair(v, w));
+    adj[v].push_back(make_pair(u, w));
+}
+ 
+// Prints shortest paths from src to all other vertices
 void Graph::primMST()
 {
     // Create a priority queue to store vertices that
@@ -203,7 +245,16 @@ void Graph::primMST()
         }
     }
  
+    // Print edges of MST using parent array
+    for (int i = 1; i < V; ++i)
+        printf("%d - %d\n", parent[i], i);
+}
 ```
+
+图示：
+摘自算法导论
+
+![](8_MST/20150403140029623.png)
 
 ## 例题
 暂缺。
