@@ -16,6 +16,7 @@ All in Chinese.
 8. 最小生成树与并查集
 9. 最短路径问题
 10. 最大流与最小割
+11. 二分图匹配
 
 
 
@@ -31,6 +32,7 @@ Contents
 8. Minimal Spanning Tree and Union-Find
 9. Minimal Route Question
 10. Max-Flow and Min-Cut
+11. Bipartite Graph Maximum Matching
 
 
 
