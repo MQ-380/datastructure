@@ -17,7 +17,7 @@ All in Chinese.
 9. 最短路径问题
 10. 最大流与最小割
 11. 二分图匹配
-
+12. 简单排序算法
 
 
 
@@ -33,6 +33,6 @@ Contents
 9. Minimal Route Question
 10. Max-Flow and Min-Cut
 11. Bipartite Graph Maximum Matching
-
+12. Simple Sort Algorithm
 
 
