@@ -18,6 +18,7 @@ All in Chinese.
 10. 最大流与最小割
 11. 二分图匹配
 12. 简单排序算法
+13. 快速排序算法
 
 
 
@@ -34,5 +35,5 @@ Contents
 10. Max-Flow and Min-Cut
 11. Bipartite Graph Maximum Matching
 12. Simple Sort Algorithm
-
+13. Quick Sort Algorithm
 
