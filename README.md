@@ -1,5 +1,5 @@
-# 数据结构与基础算法复习
-# The Review of the Basic Data Structure and the Alogorithm
+# 数据结构与基础算法/操作系统复习
+# The Review of the Basic Data Structure and the Alogorithm and the Operating System
 
 所有有图的md文件均附有pdf文件以便查看图片。
 内容均为汉语。
@@ -20,6 +20,7 @@ All in Chinese.
 12. 简单排序算法
 13. 快速排序算法
 
+OS1. 概述与进程
 
 
 Contents
@@ -36,4 +37,6 @@ Contents
 11. Bipartite Graph Maximum Matching
 12. Simple Sort Algorithm
 13. Quick Sort Algorithm
+
+OS1. Process
 
