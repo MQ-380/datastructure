@@ -19,6 +19,7 @@ All in Chinese.
 11. 二分图匹配
 12. 简单排序算法
 13. 快速排序算法
+14. 动态规划
 
 OS1. 概述与进程
 
@@ -37,6 +38,7 @@ Contents
 11. Bipartite Graph Maximum Matching
 12. Simple Sort Algorithm
 13. Quick Sort Algorithm
+14. Dynamic Programming
 
 OS1. Process
 
