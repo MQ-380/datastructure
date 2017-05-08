@@ -20,6 +20,7 @@ All in Chinese.
 12. 简单排序算法
 13. 快速排序算法
 14. 动态规划
+15. 数学
 
 OS1. 概述与进程
 
@@ -39,6 +40,7 @@ Contents
 12. Simple Sort Algorithm
 13. Quick Sort Algorithm
 14. Dynamic Programming
+15. Maths
 
 OS1. Process
 
